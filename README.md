@@ -1,53 +1,85 @@
-📸 **AttendEase** – AI Powered Attendance System
+<h1>📸 AttendEase – AI Powered Attendance System</h1>
 
-AttendEase is a Flask-based smart attendance system that uses Face Recognition + Machine Learning to automatically mark student attendance and notify parents via email when a student is absent.
-🚀 Features-
-AI Face Recognition Attendance
-Manual Attendance Backup
-Student Management (Add / Delete)
-Parent Email Notification for Absentees
-Dashboard with Present / Absent Count
-Real-time Face Detection using OpenCV
-CSV Attendance Reports
-KNN Machine Learning Model
-Gmail SMTP Integration
+<p>
+AttendEase is a Flask-based smart attendance system that uses <b>Face Recognition + Machine Learning</b>
+to automatically mark student attendance and notify parents via email when a student is absent.
+</p>
 
-🧠 How It Works
-1️⃣ Student Registration
-Teacher adds student name + parent email.
-System captures multiple face samples and stores them in pickle files.
-2️⃣ Model Training
+<hr>
+
+<h2>🚀 Features</h2>
+<ul>
+  <li>AI Face Recognition Attendance</li>
+  <li>Manual Attendance Backup</li>
+  <li>Student Management (Add / Delete)</li>
+  <li>Parent Email Notification for Absentees</li>
+  <li>Dashboard with Present / Absent Count</li>
+  <li>Real-time Face Detection using OpenCV</li>
+  <li>CSV Attendance Reports</li>
+  <li>KNN Machine Learning Model</li>
+  <li>Gmail SMTP Integration</li>
+</ul>
+
+<hr>
+
+<h2>🧠 How It Works</h2>
+
+<h3>1️⃣ Student Registration</h3>
+<p>
+Teacher adds student name and parent email. System captures multiple face samples and stores them in pickle files.
+</p>
+
+<h3>2️⃣ Model Training</h3>
+<p>
 KNN model trains automatically using stored face data.
-3️⃣ AI Attendance
-Teacher uploads class student photo:
-Faces detected using OpenCV
-Faces recognized using KNN
-Each student marked Present / Absent
-Duplicate faces ignored automaticall
-Attendance saved into CSV file.
-4️⃣ Email Alerts
-If student is Absent:
-Parent receives Gmail notification:
-Your student <name> is absent on <date>
-Missing emails are safely skipped.
-5️⃣ Dashboard
-Latest attendance is displayed:
-Total Students
-Present
-Absent
-Attendance Status
-6️⃣ Manual Attendance
-Fallback option for manual marking.
-🛠 Tech Stack
-Python
-Flask
-OpenCV
-Scikit-Learn (KNN)
-Pandas
-SMTP (Gmail)
-HTML / CSS
+</p>
 
-🗃️Project Structure 
+<h3>3️⃣ AI Attendance</h3>
+<ul>
+  <li>Teacher uploads classroom photo</li>
+  <li>Faces detected using OpenCV</li>
+  <li>Faces recognized using KNN</li>
+  <li>Each student marked Present / Absent</li>
+  <li>Duplicate faces ignored automatically</li>
+  <li>Attendance saved into CSV file</li>
+</ul>
+
+<h3>4️⃣ Email Alerts</h3>
+<p>
+If student is absent, parent receives Gmail notification:<br>
+<b>Your student &lt;name&gt; is absent on &lt;date&gt;</b><br>
+Missing emails are safely skipped.
+</p>
+
+<h3>5️⃣ Dashboard</h3>
+<ul>
+  <li>Total Students</li>
+  <li>Present</li>
+  <li>Absent</li>
+  <li>Attendance Status</li>
+</ul>
+
+<h3>6️⃣ Manual Attendance</h3>
+<p>Fallback option for manual marking.</p>
+
+<hr>
+
+<h2>🛠 Tech Stack</h2>
+<ul>
+  <li>Python</li>
+  <li>Flask</li>
+  <li>OpenCV</li>
+  <li>Scikit-Learn (KNN)</li>
+  <li>Pandas</li>
+  <li>SMTP (Gmail)</li>
+  <li>HTML / CSS</li>
+</ul>
+
+<hr>
+
+<h2>🗃️ Project Structure</h2>
+
+<pre>
 AttendEase/
 │
 ├── app.py
@@ -61,30 +93,61 @@ AttendEase/
 ├── requirements.txt
 ├── .env
 └── README.md
+</pre>
 
-▶️ Run Locally
+<hr>
+
+<h2>▶️ Run Locally</h2>
+
+<pre>
 pip install -r requirements.txt
 python app.py
-Open browser:
-http://127.0.0.1:5000
+</pre>
 
-🔐 Environment Variables (.env)
+<p>Open browser:</p>
+
+<pre>
+http://127.0.0.1:5000
+</pre>
+
+<hr>
+
+<h2>🔐 Environment Variables (.env)</h2>
+
+<pre>
 EMAIL=yourgmail@gmail.com
 PASSWORD=your_app_password
+</pre>
 
-⚠️ Notes
-Camera runs locally
-Pickle files store trained faces
-Gmail App Password required
-GitHub contains only source code (not trained data)
-📌 Deployment
-Free demo deployment using ngrok (local server exposed online).
+<hr>
+
+<h2>⚠️ Notes</h2>
+<ul>
+  <li>Camera runs locally</li>
+  <li>Pickle files store trained faces</li>
+  <li>Gmail App Password required</li>
+  <li>GitHub contains only source code (not trained data)</li>
+</ul>
+
+<hr>
+
+<h2>📌 Deployment</h2>
+<p>
+Free demo deployment using ngrok (local server exposed online).<br>
 Cloud deployment requires paid GPU services.
+</p>
 
-<img width="1920" height="1080" alt="Screenshot (205)" src="https://github.com/user-attachments/assets/f41f9edb-464b-43fd-83bf-c10c130a12d7" />
-<img width="1920" height="1080" alt="Screenshot (206)" src="https://github.com/user-attachments/assets/e4280f4f-3e03-4968-a3bc-50669cefd69f" />
-<img width="1865" height="927" alt="Screenshot 2026-02-01 173417" src="https://github.com/user-attachments/assets/7334ca06-b803-4bcb-a2ed-03853501df41" />
-<img width="1827" height="922" alt="Screenshot 2026-02-01 173547" src="https://github.com/user-attachments/assets/c3fdb97e-14e1-46ef-bf40-82e792ef2473" />
+<hr>
 
-Author ☕
-~ Sakshi kumari .
+<img width="100%" src="https://github.com/user-attachments/assets/f41f9edb-464b-43fd-83bf-c10c130a12d7">
+<br><br>
+<img width="100%" src="https://github.com/user-attachments/assets/e4280f4f-3e03-4968-a3bc-50669cefd69f">
+<br><br>
+<img width="100%" src="https://github.com/user-attachments/assets/7334ca06-b803-4bcb-a2ed-03853501df41">
+<br><br>
+<img width="100%" src="https://github.com/user-attachments/assets/c3fdb97e-14e1-46ef-bf40-82e792ef2473">
+
+<hr>
+
+<h2>👩‍💻 Author</h2>
+<p>☕ Sakshi Kumari</p>
