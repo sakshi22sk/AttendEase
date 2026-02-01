@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<h2>Manual Attendance</h2>
+
+<form method="post" id="attendanceForm">
+
+{% for s in students %}
+<div class="manual-row" data-name="{{s}}">
+
+  <div class="student-name">{{s}}</div>
+
+  <div class="btn-group">
+    <button type="button" class="present-btn dim" onclick="markPresent('{{s}}')">Present</button>
+    <button type="button" class="absent-btn dim" onclick="markAbsent('{{s}}')">Absent</button>
+  </div>
+
+</div>
+{% endfor %}
+
+<div id="hiddenInputs"></div>
+
+<br>
+<button class="btn-primary">Save Attendance</button>
+
+</form>
+
+<a href="/" class="back">⬅ Back</a>
+
+<script>
+
+function markPresent(name){
+
+  removeHidden(name)
+
+  let input=document.createElement("input")
+  input.type="hidden"
+  input.name="present"
+  input.value=name
+  input.id="present_"+name
+  document.getElementById("hiddenInputs").appendChild(input)
+
+  toggleButtons(name,true)
+}
+
+function markAbsent(name){
+
+  removeHidden(name)
+  toggleButtons(name,false)
+}
+
+function removeHidden(name){
+  let old=document.getElementById("present_"+name)
+  if(old) old.remove()
+}
+
+function toggleButtons(name,isPresent){
+
+  let rows=document.getElementsByClassName("manual-row")
+
+  for(let r of rows){
+    if(r.dataset.name===name){
+
+      let p=r.querySelector(".present-btn")
+      let a=r.querySelector(".absent-btn")
+
+      if(isPresent){
+        p.classList.remove("dim")
+        a.classList.add("dim")
+      }else{
+        a.classList.remove("dim")
+        p.classList.add("dim")
+      }
+    }
+  }
+}
+
+</script>
+
+</body>
+</html>

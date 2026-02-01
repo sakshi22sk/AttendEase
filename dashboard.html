@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="dash-header">
+
+<div style="display:flex;align-items:center;gap:10px;">
+  <img src="/static/logo.png" width="32">
+  <h2>AttendEase</h2>
+</div>
+
+
+<div style="display:flex;gap:12px;align-items:center;">
+
+<a href="/manual" class="manual-btn">
+<img src="/static/logo.png" width="18">
+Manual Attendance
+</a>
+
+<a href="/students" class="manage-btn">
+<img src="/static/logo.png" width="18">
+Manage Students
+</a>
+
+</div>
+
+</div>
+
+
+<h1>Welcome back, Teacher 👋</h1>
+<p>{{now}}</p>
+
+
+<div class="stat-grid">
+
+<div class="stat-card pastel-green">
+<div class="icon green">✓</div>
+<p>Today's Attendance</p>
+<h2>{{done}}</h2>
+</div>
+
+<div class="stat-card pastel-purple">
+<div class="icon purple">🎓</div>
+<p>Total Students</p>
+<h2>{{total}}</h2>
+</div>
+
+<div class="stat-card pastel-red">
+<div class="icon red">✕</div>
+<p>Absent</p>
+<h2>{{absent}}</h2>
+</div>
+
+<div class="stat-card pastel-blue">
+<div class="icon blue">👤</div>
+<p>Present</p>
+<h2>{{present}}</h2>
+</div>
+
+</div>
+
+
+<div class="ai-banner">
+
+<div>
+<h2>AI-Powered Attendance</h2>
+<p>Take a photo of your classroom and let AI automatically mark attendance.</p>
+</div>
+
+<a href="/take" class="ai-btn">Try It Now</a>
+
+</div>
+
+
+<!-- Classroom Hero Image -->
+
+<div class="classroom-wrap">
+<img src="/static/class.png">
+</div>
+
+
+</body>
+</html>
